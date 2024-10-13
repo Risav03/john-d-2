@@ -1,13 +1,14 @@
 import Image from "next/image";
 import "../app/globals.css";
-// import bg from "@/assets/chumbg.jpg"
+import bg from "@/assets/chumbg.jpg"
 // import chum from "@/assets/johndchum.png"
 import { Footer } from "@/components/footer";
+import { About } from "@/components/about";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-    <div className="flex flex-col max-md:p-4 items-center justify-center h-screen">
+    <div className="flex flex-col max-md:p-4 items-center justify-center h-screen sticky top-0">
       <div className="bg-gradient-to-t absolute z-50 flex items-end p-20 justify-center top-0 left-0 from-black/80 to-black/20 w-screen h-screen">
         <div className="flex h-10 top-6 absolute">
           <svg
@@ -23,8 +24,8 @@ export default function Home() {
               d="M279.5 316.5C184.946 584.5 85 678 .5 678V.5H662c-88.167.5-301 85-382.5 316z"
             ></path>
           </svg>
-          <div className="w-60 h-16 flex items-center justify-center bg-black">
-            <h1 className="text-2xl">Hi! I'm <span className="font-bold text-orange-500">John D</span></h1>
+          <div className="w-72 h-16 flex items-center justify-center bg-black">
+            <h1 className="text-2xl">Hi! I'm <span className="font-bold text-orange-500">Inspector Orange</span></h1>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,10 +45,11 @@ export default function Home() {
       </div>
 
       <div className="h-[100vh] top-0 absolute left-0 overflow-hidden object-contain p-6 border-black">
-        {/* <Image src={bg} className="h-full z-10 rounded-2xl object-cover " alt="bg" /> */}
+        <Image src={bg} className="h-full z-10 rounded-2xl object-cover " alt="bg" />
       </div>
 
     </div>
+    <About/>
     <Footer/>
     </div>
 
