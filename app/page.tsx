@@ -24,8 +24,8 @@ export default function Home() {
               d="M279.5 316.5C184.946 584.5 85 678 .5 678V.5H662c-88.167.5-301 85-382.5 316z"
             ></path>
           </svg>
-          <div className="w-72 h-16 flex items-center justify-center bg-black">
-            <h1 className="text-2xl">Hi! I'm <span className="font-bold text-orange-500">Inspector Orange</span></h1>
+          <div className="md:w-72 w-40 h-16 flex items-center justify-center bg-black">
+            <h1 className="text-xl md:text-2xl">Hi! I'm <span className="font-bold text-orange-500">Inspector Orange</span></h1>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
