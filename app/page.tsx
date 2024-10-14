@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "../app/globals.css";
 import bg from "@/assets/bg.jpg"
-// import chum from "@/assets/johndchum.png"
+import chum from "@/assets/johndchum.png"
 import { Footer } from "@/components/footer";
 import { About } from "@/components/about";
 
@@ -41,7 +41,7 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        {/* <Image src={chum} alt="chum" className="w-[45rem] absolute bottom-0 z-50" /> */}
+        <Image src={chum} alt="chum" className="w-[45rem] absolute bottom-0 z-50" />
       </div>
 
       <div className="h-[100vh] top-0 absolute left-0 overflow-hidden object-contain p-6 border-black">
