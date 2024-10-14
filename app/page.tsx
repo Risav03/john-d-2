@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="flex flex-col">
     <div className="flex flex-col max-md:p-4 items-center justify-center h-screen sticky top-0">
-      <div className="bg-gradient-to-t absolute z-50 flex items-end p-20 justify-center top-0 left-0 from-black/80 to-black/20 w-screen h-screen">
-        <div className="flex h-10 top-6 absolute">
+      <div className="bg-gradient-to-t absolute z-50 flex items-end justify-center top-0 left-0 from-black/80 to-black/20 w-screen h-screen">
+        <div className="flex h-10 top-6 max-md:top-2 absolute">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="662"
@@ -41,10 +41,10 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <Image src={chum} alt="chum" className="w-[45rem] absolute bottom-0 z-50" />
+        <Image src={chum} alt="chum" className="w-[40rem] absolute bottom-0 z-50" />
       </div>
 
-      <div className="h-[100vh] top-0 absolute left-0 overflow-hidden object-contain p-6 border-black">
+      <div className="h-[100vh] top-0 absolute left-0 overflow-hidden object-contain p-6 max-md:p-2 border-black">
         <Image src={bg} className="h-full z-10 rounded-2xl object-cover " alt="bg" />
       </div>
 
