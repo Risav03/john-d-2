@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     siteName: 'Inspector Orange',
     images: [
       {
-        url: 'https://opengraph.b-cdn.net/production/images/348c4f5e-86dc-4611-b588-26d63849b008.jpg?token=WUIoaDyhTF-eGOtHCy8pugFHPvdEmBD36wuTdGXdRCg&height=1200&width=1200&expires=33264902575', // Must be an absolute URL
+        url: 'https://inspector-orange.vercel.app/footerchum.jpg', // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: 'https://opengraph.b-cdn.net/production/images/348c4f5e-86dc-4611-b588-26d63849b008.jpg?token=WUIoaDyhTF-eGOtHCy8pugFHPvdEmBD36wuTdGXdRCg&height=1200&width=1200&expires=33264902575', // Must be an absolute URL
+        url: 'https://inspector-orange.vercel.app/footerchum.jpg', // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: 'My custom alt',
