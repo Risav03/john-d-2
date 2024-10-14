@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "../app/globals.css";
-import bg from "@/assets/chumbg.jpg"
+import bg from "@/assets/bg.jpg"
 // import chum from "@/assets/johndchum.png"
 import { Footer } from "@/components/footer";
 import { About } from "@/components/about";
@@ -25,7 +25,7 @@ export default function Home() {
             ></path>
           </svg>
           <div className="md:w-72 w-40 h-16 flex items-center justify-center bg-black">
-            <h1 className="text-xl md:text-2xl">Hi! I'm <span className="font-bold text-orange-500">Inspector Orange</span></h1>
+            <h1 className="text-xl md:text-2xl">Inspector<span className="font-bold text-orange-500"> Orange</span></h1>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
