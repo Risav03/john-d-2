@@ -7,7 +7,7 @@ import { SiOpensea } from 'react-icons/si'
 
 export const Footer = () => {
   return (
-    <div id='footer' className='bg-[#d55a34] rounded-t-xl pt-10 relative z-50 border-t-4 border-[#ffc3b1] w-screen md:h-52 max-md:flex-col flex px-10'>
+    <div id='footer' className='bg-[#d55a34] rounded-t-xl pt-10 relative bottom-2 z-50 border-t-4 border-[#ffc3b1] w-screen md:h-52 max-md:flex-col flex px-10'>
         <div className='md:w-[80%] max-md:mx-auto'>
           <h2 className='text-3xl '>My Links</h2>
           <div className='mt-2 flex gap-4 max-md:justify-center'>

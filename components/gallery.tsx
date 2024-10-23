@@ -1,7 +1,7 @@
 "use client"
 
 import chumbg from "@/assets/chumbg.jpg"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import React, { useEffect, useState } from 'react'
 import abi from "@/utils/abis/chumabi"
 import { ContractAdd } from "@/utils/contractAds"
@@ -11,6 +11,10 @@ import blur from "@/assets/logos/blur2.png"
 import opensea from "@/assets/logos/opensea2.svg"
 // import magiceden from "@/assets/logos/magiceden2.png"
 
+import catparty from "@/assets/collabs/catparty.png"
+import halloween from "@/assets/collabs/halloween.png"
+import tradingCard from "@/assets/collabs/tradingcard.png"
+import gif from "@/assets/collabs/chumchums.gif"
 interface Obj {
     trait_type: string,
     value: string
@@ -64,14 +68,45 @@ export const Gallery = () => {
         fetchChums();
     },[])
 
+    const collabArr = [{
+        name: "Cat Party",
+        opensea: "https://opensea.io/assets/base/0x520c8125a65540e47ee7404cb3e943eb37bfa2b2/1",
+        artist: "simplecat",
+        rotation: " rotate-[5deg] ",
+        image: catparty
+    },
+    {
+        name: "Chum Halloween Party 2024",
+        opensea: "https://opensea.io/assets/base/0xf2cfd07e26a3f6faa471f39e0c66f6c08a22f778/2",
+        artist: "CHUM BASE",
+        rotation: " rotate-[-6deg] ",
+        image: halloween
+    },
+    {
+        name: "Chickitty",
+        opensea: "https://opensea.io/assets/base/0x9a291dd80cd601f4c02da3f595d78e4b640e8b56/161",
+        artist: "FTGC",
+        rotation: " rotate-[2deg] ",
+        image: tradingCard
+    },
+    {
+        name: "Chum Chums #1081",
+        opensea: "https://opensea.io/assets/base/0xf8a1e337c83ce46464d87e9a5dafc72854f4c196/118",
+        artist: "Deriiv: Bonus Collection",
+        rotation: " rotate-[-5deg] ",
+        image: gif
+    },
+]
+
   return (
-    <div id="gallery" className='flex max-md:flex-col rounded-t-xl gap-10 sticky top-0 items-center bg-black justify-center h-screen border-t-4 border-[#d55a34] object-contain overflow-hidden'>
-        <div className="md:py-20 md:px-10 px-4 py-10 relative z-50">
-            <h2 className='text-[#ffc3b1] text-3xl md:text-4xl md:px-10 px-4 mb-10 '>Gallery</h2>
-            <div className="overflow-x-scroll h-[31rem]">
-                <div className="flex gap-4 w-screen overflow-scroll md:px-10 px-4">
+    <div id="gallery" className='flex max-md:flex-col rounded-t-xl gap-10 relative items-center bg-black justify-center min-h-screen border-t-4 border-[#d55a34] object-contain overflow-hidden'>
+        <div className="md:pt-20 md:px-10 px-4 pt-10 relative z-50">
+            <h2 className='text-[#ffc3b1] text-3xl text-center md:text-5xl md:px-10 px-4 mb-10 '>Gallery</h2>
+            <div className="overflow-x-scroll h-[36rem] overflow-y-hidden py-[1rem] bg-black/50">
+                <h2 className='text-white text-2xl md:text-3xl md:px-10 px-4 mb-4'>Collected:</h2>
+                <div className="flex gap-4 items-center w-screen overflow-scroll md:px-10 px-4">
                     {data.map((item)=>(
-                        <div className="bg-black border-2 h-[28rem w-60 min-w-60 border-[#d55a34] rounded-lg flex flex-col items-center p-4">
+                        <div className="bg-black border-2 h-[31rem] w-60 min-w-60 border-[#d55a34] rounded-lg flex flex-col items-center p-4">
                             <Image width={1080} height={1080} src={item.img} alt="image" className="w-48 h-48 rounded-lg" />
                             <h2 className="mt-2">Chum Chums <span className="text-[#d55a34]">#{item.tokenId}</span></h2>
 
@@ -95,8 +130,40 @@ export const Gallery = () => {
                     ))}
                 </div>
             </div>
+
+            <div className="bg-[#d55a34] pb-10 min-h-screen w-screen mt-10 relative">
+                <h2 className='text-white text-3xl text-center md:text-5xl md:px-10 px-4 mb-10 pt-20 max-md:pt-10'>Orange Collabs</h2>
+                <div className="flex flex-wrap items-center justify-center pt-10 gap-12">
+                    {collabArr.map((item)=>(
+                        <CollabHolder rotation={item.rotation} name={item.name} artist={item.artist} opensea={item.opensea} image={item.image} />
+                    ))}
+                </div>
+            </div>
         </div>
-        <Image src={chumbg} alt="chumbg" className="brightness-[15%] absolute left-0 top-0 h-screen w-screen object-cover" />
+        <Image src={chumbg} alt="chumbg" className="brightness-[15%] absolute left-0 top-0 h-full w-screen object-cover" />
     </div>
   )
+}
+
+type CollabHolderType = {
+    name:string,
+    image:StaticImageData, 
+    opensea:string,
+    artist:string,
+    rotation:string
+}
+
+function CollabHolder({name, image, opensea, artist, rotation}:CollabHolderType){
+    return(
+        <div className={`h-80 w-60 bg-white ${rotation} hover:rotate-0 duration-200 shadow-xl shadow-black/30`}>
+            <a href={opensea} target="_blank" className="">
+                <div className="p-4">
+                    <Image src={image} alt={name} width={1080} height={1080} className="" />
+                    <h2 className="text-center text-black text-xl mt-2">{name}</h2>
+                    <h2 className="text-center text-[#d55a34] text-lg">{artist}</h2>
+
+                </div>
+            </a>
+        </div>
+    )
 }
