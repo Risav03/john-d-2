@@ -9,12 +9,7 @@ import { ethers } from "ethers"
 import axios from "axios"
 import blur from "@/assets/logos/blur2.png"
 import opensea from "@/assets/logos/opensea2.svg"
-// import magiceden from "@/assets/logos/magiceden2.png"
 
-// import catparty from "@/assets/collabs/catparty.png"
-// import halloween from "@/assets/collabs/halloween.png"
-// import tradingCard from "@/assets/collabs/tradingcard.png"
-// import gif from "@/assets/collabs/chumchums.gif"
 interface Obj {
     trait_type: string,
     value: string
@@ -73,28 +68,28 @@ export const Gallery = () => {
         opensea: "https://opensea.io/assets/base/0x520c8125a65540e47ee7404cb3e943eb37bfa2b2/1",
         artist: "simplecat",
         rotation: " rotate-[5deg] ",
-        image: "http://localhost:3000/collabs/catparty.png"
+        image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/catparty.png"
     },
     {
         name: "Chum Halloween Party 2024",
         opensea: "https://opensea.io/assets/base/0xf2cfd07e26a3f6faa471f39e0c66f6c08a22f778/2",
         artist: "CHUM BASE",
         rotation: " rotate-[-6deg] ",
-        image: "http://localhost:3000/collabs/catparty.png"
+        image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/halloween.png"
     },
     {
         name: "Chickitty",
         opensea: "https://opensea.io/assets/base/0x9a291dd80cd601f4c02da3f595d78e4b640e8b56/161",
         artist: "FTGC",
         rotation: " rotate-[2deg] ",
-        image: "http://localhost:3000/collabs/catparty.png"
+        image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/tradingcard.png"
     },
     {
         name: "Chum Chums #1081",
         opensea: "https://opensea.io/assets/base/0xf8a1e337c83ce46464d87e9a5dafc72854f4c196/118",
         artist: "Deriiv: Bonus Collection",
         rotation: " rotate-[-5deg] ",
-        image: "http://localhost:3000/collabs/catparty.png"
+        image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/chumchums.gif"
     },
 ]
 
