@@ -10,6 +10,7 @@ import { IoIosMenu } from "react-icons/io";
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import { Gallery } from "@/components/gallery";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -41,6 +42,7 @@ export default function Home() {
                 <a href="#about" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">About</a>
                 <a href="#gallery" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Gallery</a>
                 <a href="#footer" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Links</a>
+                <Link onClick={()=>{setBringMenu(false)}} href="/merch" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Merch</Link>
               </div>
               <div className="absolute top-16 -right-0 rotate-180 -scale-y-100">
                 <svg
@@ -68,6 +70,7 @@ export default function Home() {
             <a onClick={()=>{setBringMenu(false)}} href="#about" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">About</a>
             <a onClick={()=>{setBringMenu(false)}} href="#gallery" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Gallery</a>
             <a onClick={()=>{setBringMenu(false)}} href="#footer" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Links</a>
+            <Link onClick={()=>{setBringMenu(false)}} href="/merch" className="text-lg hover:text-[#d55a34] duration-200 hover:-translate-y-1">Merch</Link>
           </div>
         </div>
           
