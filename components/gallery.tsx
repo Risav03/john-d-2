@@ -91,6 +91,13 @@ export const Gallery = () => {
         rotation: " rotate-[-5deg] ",
         image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/chumchums.gif"
     },
+    {
+        name: "On Chain Chums #25",
+        opensea: "https://opensea.io/assets/base/0x2ed8068e3cb2376ee7741d6756da04bcde247cc5/25/",
+        artist: "On Chain Chums",
+        rotation: " rotate-[-1deg] ",
+        image: "https://3xbuilds.s3.ap-south-1.amazonaws.com/collabs/chumbg.jpg"
+    },
 ]
 
   return (
@@ -128,7 +135,7 @@ export const Gallery = () => {
 
             <div className="bg-[#d55a34] pb-10 min-h-screen w-screen mt-10 relative">
                 <h2 className='text-white text-3xl text-center md:text-5xl md:px-10 px-4 mb-10 pt-20 max-md:pt-10'>Orange Collabs</h2>
-                <div className="flex flex-wrap items-center justify-center pt-10 gap-12">
+                <div className="flex flex-wrap items-center justify-center w-[90%] mx-auto pt-10 gap-12">
                     {collabArr.map((item)=>(
                         <CollabHolder rotation={item.rotation} name={item.name} artist={item.artist} opensea={item.opensea} image={item.image} />
                     ))}
